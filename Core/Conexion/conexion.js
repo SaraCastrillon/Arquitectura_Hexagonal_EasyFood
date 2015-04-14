@@ -6,7 +6,6 @@ function conectar(){
 		dataType: 'xml',
 		success:function(data){
 			datos = data;
-			alert(data);
 		},
 		error:function(){
 			alert("error");
