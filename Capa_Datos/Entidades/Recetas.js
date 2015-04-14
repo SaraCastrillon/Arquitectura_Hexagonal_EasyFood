@@ -1,4 +1,4 @@
-function Recetas(id,duracion,nombre,dificultad,cantidad_personas,paso_paso,ingredientes){
+function Receta(id,duracion,nombre,dificultad,cantidad_personas,paso_paso,ingredientes){
 	var id,duracion,nombre,dificultad,cantidad_personas,paso_paso,ingredientes;
 	this.id = id;
 	this.duracion = duracion;
