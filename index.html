@@ -1,12 +1,71 @@
 <!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-	<head>
-	</head>
-	<body>
-		<input type="button" value="OK" onclick="crearRecetas()"/>
-		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript" src="Core/Entidades/Recetas.js"></script>
-		<script type="text/javascript" src="Core/Conexion/conexion.js"></script>
-		<script type="text/javascript" src="Interfaz/interfaz.js"></script>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+
+        <title>Easyfood</title>
+    </head>
+    <body>
+        <!-- Start of first page -->
+    <div data-role="page" id="login">
+	    <div role="main" class="ui-content" id="login">
+            <div id="contenedor-login">
+                <center><img src="img/easyfood.png"/></center>
+                <form id="form" method="POST" action="#">
+                <div class="ui-field-contain">
+                    <center><input type="text" placeholder="Usuario" name="usuario" id="usuario" style="text-align: center" /></center>
+                    <center><input type="password" placeholder="Contraseña" name="clave" id="clave" style="text-align: center" /></center>
+                    <input type="submit" name="login" id="login" value="Login" onclick="acceder()">
+                </div>
+                </form>
+            </div>
+            
+	    </div><!-- /content -->
+
+	    <!-- /footer -->
+    </div><!-- /page -->
+
+    <!-- Start of second page -->
+    <div data-role="page" id="main" onload="listar()">
+        <div data-role="header" id="header-main">
+            <center><img src="img/easyfood.png"/></center>
+	    </div><!-- /header -->
+	    <div role="main" class="ui-content">
+            <ul id="lista-recetas" data-role="listview">
+                
+            </ul>
+	    </div><!-- /content -->
+
+	    <div data-role="footer">
+	    </div><!-- /footer -->
+    </div><!-- /page -->
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    </body>
 </html>
